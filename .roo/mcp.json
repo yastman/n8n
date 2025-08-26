@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "https://awdawdawd.space",
+        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlNGQ3NmE1OS1jNzA5LTQyYTctODIzYy02ZjExODE1MzdiYjYiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzU0NTc5MTUwLCJleHAiOjE3NjIyOTM2MDB9.cxs4P0EdlilGhYgP-6Qj5cRdrsRhJw7NsOxQO5UXDsk"
+      },
+      "alwaysAllow": [
+        "tools_documentation",
+        "n8n_create_workflow",
+        "n8n_get_workflow_details",
+        "n8n_validate_workflow",
+        "n8n_update_partial_workflow",
+        "n8n_update_full_workflow",
+        "list_nodes",
+        "get_node_info",
+        "get_node_documentation",
+        "n8n_health_check",
+        "n8n_diagnostic",
+        "get_node_essentials"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {
+        "DEFAULT_MINIMUM_TOKENS": ""
+      },
+      "alwaysAllow": ["resolve-library-id", "get-library-docs"]
+    },
+    "sequentialthinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "alwaysAllow": ["sequentialthinking"]
+    }
+  }
+}

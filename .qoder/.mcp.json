@@ -1,0 +1,63 @@
+{
+  "mcpServers": {
+    "n8n-mcp": {
+      "command": ["npx", "-y", "n8n-mcp"],
+      "description": "Provides tools to interact with and manage n8n workflows, nodes, and executions.",
+      "displayName": "n8n MCP Server"
+    },
+    "redis-mcp": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/redis/mcp-redis.git",
+        "redis-mcp-server",
+        "--url",
+        "redis://default:redis_secure_password_2024_domain@95.111.252.29:6379/0"
+      ],
+      "env": {},
+      "description": "Provides tools to manage and search data in Redis using official Redis MCP server.",
+      "displayName": "Redis MCP Server"
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=bvcgsavjmrvkxcetyeyz"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_5b637b93f8020bd9b89d4e48c187477e38bd26d8"
+      },
+      "description": "Supabase MCP Server for ceramic products e-commerce platform",
+      "displayName": "Supabase Ceramic Products DB"
+    },
+    "redis": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/redis/mcp-redis.git",
+        "redis-mcp-server",
+        "--url",
+        "redis://default:redis_secure_password_2024_domain@95.111.252.29:6379/0"
+      ],
+      "description": "Redis MCP Server for caching and session management",
+      "displayName": "Redis Cache Server"
+    },
+    "7": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "MCP Server 7 - Memory Server Example",
+      "displayName": "MCP Server 7",
+      "trust": false,
+      "timeout": 60000
+    },
+    "local-ai-automation": {
+      "command": "node",
+      "args": ["./mcp-servers/my-custom-server/server.js"],
+      "description": "Local AI automation stack management server for project-specific tools",
+      "displayName": "AI Automation Stack Server",
+      "trust": true
+    }
+  }
+}

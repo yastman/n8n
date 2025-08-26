@@ -1,0 +1,129 @@
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "redis-mcp": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "C:\\Users\\user\\Documents\\Сайты\\Сервера\\mcp-redis",
+        "redis-mcp-server",
+        "--url",
+        "redis://default:redis_secure_password_2024_domain@95.111.252.29:6379/0"
+      ],
+      "env": {
+        "REDIS_SSL": "false",
+        "REDIS_CLUSTER_MODE": "false"
+      },
+      "description": "Official Redis MCP server for vector search, caching, and data management in AI automation platform.",
+      "displayName": "Redis MCP Server",
+      "trust": true,
+      "alwaysAllow": [
+        "set",
+        "get",
+        "hset",
+        "hget",
+        "hgetall",
+        "hdel",
+        "hexists",
+        "set_vector_in_hash",
+        "get_vector_from_hash",
+        "create_vector_index_hash",
+        "vector_search_hash",
+        "get_indexes",
+        "get_index_info",
+        "get_indexed_keys_number",
+        "json_set",
+        "json_get",
+        "json_del",
+        "lpush",
+        "rpush",
+        "lpop",
+        "rpop",
+        "lrange",
+        "llen",
+        "sadd",
+        "srem",
+        "smembers",
+        "zadd",
+        "zrange",
+        "zrem",
+        "publish",
+        "subscribe",
+        "unsubscribe",
+        "xadd",
+        "xrange",
+        "xdel",
+        "delete",
+        "type",
+        "expire",
+        "rename",
+        "scan_keys",
+        "scan_all_keys",
+        "dbsize",
+        "info",
+        "client_list"
+      ]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=bvcgsavjmrvkxcetyeyz"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_5b637b93f8020bd9b89d4e48c187477e38bd26d8"
+      },
+      "description": "Supabase MCP Server for ceramic products e-commerce platform",
+      "displayName": "Supabase Ceramic Products DB",
+      "alwaysAllow": [
+        "create_branch",
+        "list_branches",
+        "delete_branch",
+        "merge_branch",
+        "reset_branch",
+        "rebase_branch",
+        "list_tables",
+        "list_extensions",
+        "apply_migration",
+        "list_migrations",
+        "get_logs",
+        "execute_sql",
+        "get_project_url",
+        "get_anon_key",
+        "list_edge_functions",
+        "get_advisors",
+        "deploy_edge_function",
+        "generate_typescript_types"
+      ]
+    },
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["-y", "n8n-mcp"],
+      "description": "Provides tools to interact with and manage n8n workflows, nodes, and executions.",
+      "displayName": "n8n MCP Server"
+    },
+    "my-custom-server": {
+      "command": "node",
+      "args": ["mcp-servers/my-custom-server/server.js"],
+      "description": "Custom AI automation server for project status, code analysis, and Docker service management",
+      "displayName": "AI Automation Custom Server",
+      "trust": true
+    }
+  }
+}

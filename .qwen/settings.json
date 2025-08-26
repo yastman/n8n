@@ -1,0 +1,118 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=bvcgsavjmrvkxcetyeyz"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_5b637b93f8020bd9b89d4e48c187477e38bd26d8"
+      },
+      "description": "Supabase MCP Server for ceramic products e-commerce platform",
+      "displayName": "Supabase Ceramic Products DB",
+      "alwaysAllow": [
+        "create_branch",
+        "list_branches",
+        "delete_branch",
+        "merge_branch",
+        "reset_branch",
+        "rebase_branch",
+        "list_tables",
+        "list_extensions",
+        "apply_migration",
+        "list_migrations",
+        "get_logs",
+        "execute_sql",
+        "get_project_url",
+        "get_anon_key",
+        "list_edge_functions",
+        "get_advisors",
+        "deploy_edge_function",
+        "generate_typescript_types"
+      ]
+    },
+    "redis": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/redis/mcp-redis.git",
+        "redis-mcp-server",
+        "--url",
+        "redis://default:redis_secure_password_2024_domain@95.111.252.29:6379/0"
+      ],
+      "description": "Redis MCP Server for caching and session management",
+      "displayName": "Redis Cache Server",
+      "alwaysAllow": [
+        "string",
+        "hash",
+        "list",
+        "set",
+        "sorted_set",
+        "pubsub",
+        "streams",
+        "json",
+        "query_engine",
+        "server_management",
+        "info",
+        "dbsize",
+        "scan_all_keys",
+        "get_vector_from_hash",
+        "type",
+        "get",
+        "hgetall",
+        "json_get",
+        "create_vector_index_hash",
+        "get_indexes",
+        "get_index_info",
+        "llen",
+        "lrange"
+      ]
+    },
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "https://awdawdawd.space",
+        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlNGQ3NmE1OS1jNzA5LTQyYTctODIzYy02ZjExODE1MzdiYjYiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzU0NTc5MTUwLCJleHAiOjE3NjIyOTM2MDB9.cxs4P0EdlilGhYgP-6Qj5cRdrsRhJw7NsOxQO5UXDsk"
+      },
+      "description": "n8n MCP Server for workflow automation and AI-powered ceramic product platform",
+      "displayName": "n8n Workflow Automation",
+      "alwaysAllow": [
+        "tools_documentation",
+        "list_nodes",
+        "get_node_info",
+        "get_node_essentials",
+        "search_nodes",
+        "search_node_properties",
+        "list_ai_tools",
+        "get_node_as_tool_info",
+        "get_node_for_task",
+        "list_tasks",
+        "validate_node_operation",
+        "validate_node_minimal",
+        "validate_workflow",
+        "validate_workflow_connections",
+        "validate_workflow_expressions",
+        "get_property_dependencies",
+        "get_node_documentation",
+        "get_database_statistics",
+        "n8n_health_check",
+        "n8n_list_workflows",
+        "n8n_list_available_tools",
+        "n8n_get_workflow"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp"
+    }
+  }
+}
