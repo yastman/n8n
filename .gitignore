@@ -154,3 +154,13 @@ docker-compose.override.yml
 # OS
 .DS_Store
 Thumbs.db
+.claude
+.gemini
+.qoder
+.qwen
+.roo
+.venv
+.env
+.kilocodeigonore
+.qoderignore
+ssh-keys.md
